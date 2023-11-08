@@ -1,0 +1,50 @@
+.content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 32px;
+
+    &--center {
+        justify-content: center;
+        align-items: center;
+
+        .content__text {
+            text-align: center;
+        }
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__caption {
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 100%;
+        text-transform: capitalize;
+    }
+
+    &__text {
+        font-size: 1.125rem;
+        line-height: 160%;
+    }
+
+    &__button-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .btn--link {
+        padding: 16px 0px;
+
+        &:hover {
+            gap: 16px;
+        }
+    }
+}
