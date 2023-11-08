@@ -1,17 +1,201 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 12 | @import 'components/text';
- *    |         ^^^^^^^^^^^^^^^^^
- *    '
- *   scss\main.scss 12:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 12 \2502  @import 'components/text';\a    \2502          ^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\main.scss 12:9  root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  color: #FFF;
 }
+
+html, body {
+  font-family: "Roboto", sans-serif;
+  background-color: #0F172A;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #333;
+}
+
+input {
+  outline: none;
+}
+
+.l-header {
+  display: flex;
+  justify-content: center;
+  padding: 24px 80px;
+}
+.l-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(250, 250, 250, 0.05);
+  max-width: 1000px;
+  width: 100%;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.07), 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+.l-header__button-group {
+  display: flex;
+  gap: 16px;
+}
+
+.l-section {
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+.l-section__content {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.l-section__content--line-one {
+  position: relative;
+  display: inline-block;
+}
+.l-section__content--line-one::before {
+  content: "";
+  position: absolute;
+  width: 191px;
+  height: 5px;
+  bottom: 0;
+  left: 3px;
+  background-color: #C084FC;
+}
+.l-section__content--line-two {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+.l-section__content--line-two::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 198px;
+  height: 8px;
+  top: 15px;
+  left: 4px;
+  background-color: #C084FC;
+}
+.l-section__text {
+  font-size: 1.125rem;
+  line-height: 160%;
+  text-align: center;
+}
+.l-section__button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.l-section__image {
+  max-width: 1000px;
+  width: 100%;
+}
+.l-section__logo-container {
+  display: flex;
+  gap: 80px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 110%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo--large {
+  font-size: 2rem;
+}
+.logo__icon {
+  width: 32px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+}
+.menu__link {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+  padding: 8px;
+  transition: 300ms ease-out;
+}
+.menu__link:hover {
+  color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-5px);
+}
+
+.btn {
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  transition: 300ms ease-out;
+}
+.btn__label {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+  padding: 0px 16px;
+  transition: 300ms ease-out;
+}
+.btn--link:hover .btn__label {
+  color: rgba(255, 255, 255, 0.8);
+}
+.btn--fill {
+  background-color: #9333EA;
+  border-color: #9333EA;
+}
+.btn--fill:hover {
+  background-color: #6B21A8;
+  border-color: #6B21A8;
+}
+.btn--outline {
+  border-color: #FFF;
+}
+.btn--outline:hover {
+  border-color: #9333EA;
+}
+.btn--outline:hover .btn__label {
+  color: #9333EA;
+}
+.btn--large {
+  padding: 16px;
+  min-width: 168px;
+}
+.btn--large .btn__label {
+  font-size: 1.25rem;
+}
+
+.title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 110%;
+}
+.title--two {
+  font-size: 3.5rem;
+}
+.title--dark-purple {
+  color: #9333EA;
+}
+
+/*# sourceMappingURL=style.css.map */
