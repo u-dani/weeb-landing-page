@@ -1,0 +1,11 @@
+@use '../variables' as var;
+
+.title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 110%;
+
+    &--dark-purple {
+        color: map-get(var.$colors, purple-600);
+    }
+}
