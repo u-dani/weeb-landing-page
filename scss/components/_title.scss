@@ -5,7 +5,13 @@
     font-weight: 800;
     line-height: 110%;
 
+    &--two {
+        font-size: 3.5rem;
+    }
+
     &--dark-purple {
         color: map-get(var.$colors, purple-600);
     }
+
+
 }
