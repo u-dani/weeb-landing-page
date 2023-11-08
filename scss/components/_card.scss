@@ -1,8 +1,18 @@
 .card {
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 32px;
+
+    &--center {
+        justify-content: center;
+        align-items: center;
+
+        .card__text {
+            text-align: center;
+        }
+    }
 
     &__top {
         display: flex;
