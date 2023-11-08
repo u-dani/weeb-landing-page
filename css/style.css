@@ -50,6 +50,9 @@ input {
   align-items: center;
   gap: 80px;
 }
+.l-section--row {
+  flex-direction: row;
+}
 .l-section__content {
   max-width: 800px;
   display: flex;
@@ -100,6 +103,9 @@ input {
   max-width: 1000px;
   width: 100%;
 }
+.l-section__image--small {
+  max-width: 375px;
+}
 .l-section__logo-container {
   display: flex;
   gap: 80px;
@@ -147,7 +153,7 @@ input {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  padding: 12px;
+  padding: 12px 26px;
   transition: 300ms ease-out;
 }
 .btn__label {
@@ -155,8 +161,11 @@ input {
   font-weight: 500;
   letter-spacing: 0.5px;
   line-height: 1.5rem;
-  padding: 0px 16px;
   transition: 300ms ease-out;
+}
+.btn__icon {
+  width: 24px;
+  display: flex;
 }
 .btn--link:hover .btn__label {
   color: rgba(255, 255, 255, 0.8);
@@ -194,8 +203,61 @@ input {
 .title--two {
   font-size: 3.5rem;
 }
+.title--purple {
+  color: #C084FC;
+}
 .title--dark-purple {
   color: #9333EA;
+}
+.title #square {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+.title #square::before {
+  content: "";
+  position: absolute;
+  width: 128px;
+  left: -8px;
+  z-index: -1;
+  top: -5px;
+  height: 100%;
+  border: 3px solid orangered;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 32px;
+}
+.card__top {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card__caption {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 100%;
+  text-transform: capitalize;
+}
+.card__text {
+  font-size: 1.125rem;
+  line-height: 160%;
+}
+.card__button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.card .btn--link {
+  padding: 16px 0px;
+}
+.card .btn--link:hover {
+  gap: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */
