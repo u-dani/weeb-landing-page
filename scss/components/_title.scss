@@ -82,4 +82,21 @@
             background-color: map-get(var.$colors, pink-700);
         }
     }
+
+    #line-bottom-two {
+        position: relative;
+        display: inline-block;
+        z-index: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 172px;
+            height: 5px;
+            bottom: 0;
+            left: 2px;
+            background-color: map-get(var.$colors, purple-400);
+        }
+    }
 }
