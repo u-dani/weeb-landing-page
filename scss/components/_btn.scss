@@ -2,11 +2,15 @@
 
 .btn {
     background-color: transparent;
-    border-radius: 8px;
     border: 2px solid transparent;
+    border-radius: 8px;
+
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 8px;
-    padding: 8px;
+
+    padding: 12px;
     transition: 300ms ease-out;
 
     &__label {
@@ -18,8 +22,8 @@
         transition: 300ms ease-out;
     }
 
-    &:hover &__label {
-        color: rgba(255, 255, 255, .8);        
+    &--link:hover .btn__label {
+        color: rgba(255, 255, 255, .8);
     }
 
     &--fill {
@@ -34,5 +38,21 @@
 
     &--outline {
         border-color: map-get(var.$colors, white);
+
+        &:hover {
+            border-color: map-get(var.$colors, purple-600);
+            .btn__label {
+                color: map-get(var.$colors, purple-600);
+            }
+        }
+    }
+
+    &--large {
+        padding: 16px;
+        min-width: 168px;
+
+        & .btn__label {
+            font-size: 1.25rem;
+        }
     }
 }
