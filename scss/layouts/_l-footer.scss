@@ -1,0 +1,67 @@
+@use '../variables' as var;
+
+.l-footer {
+    background: white;
+    padding: 0px 80px;
+
+    & * {
+        color: map-get(var.$colors, blue-gray-900);
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 48px;
+        align-items: flex-start;
+        padding: 48px 0px;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 48px;
+        padding: 48px 0px;
+    }
+
+    &__text {
+        font-size: 1rem;
+        line-height: 140%;
+    }
+
+    &__list > * {
+        padding: 12px 0px;
+    }
+
+    &__caption {
+        font-size: 1rem;
+        color: map-get(var.$colors, blue-gray-400);
+        text-transform: uppercase;
+        font-weight: 500;
+        line-height: 110%;
+    }
+
+    &__link {
+        font-size: 1rem;
+        line-height: 140%;
+
+        &:hover {
+            color: map-get(var.$colors, blue-gray-400);
+        }
+    }
+
+    &__icon-container {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        transition: 300ms ease-out;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+}
