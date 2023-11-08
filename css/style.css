@@ -212,7 +212,22 @@ input {
   z-index: -1;
   top: -5px;
   height: 100%;
-  border: 3px solid orangered;
+  border: 3px solid #C2410C;
+}
+.title #square-fill {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+.title #square-fill::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 80px;
+  height: 80px;
+  top: 0;
+  left: -10px;
+  background-color: #BE185D;
 }
 
 .card {
