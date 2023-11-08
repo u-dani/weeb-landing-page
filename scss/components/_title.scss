@@ -17,6 +17,38 @@
         color: map-get(var.$colors, purple-600);
     }
 
+    #line-bottom {
+        position: relative;
+        display: inline-block;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 191px;
+            height: 5px;
+            bottom: 0;
+            left: 3px;
+            background-color: map-get(var.$colors, purple-400);
+        }
+    }
+
+    #line-top {
+        position: relative;
+        display: inline-block;
+        z-index: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 198px;
+            height: 8px;
+            top: 15px;
+            left: 4px;
+            background-color: map-get(var.$colors, purple-400);
+        }
+    }
+
     #square {
         position: relative;
         display: inline-block;
