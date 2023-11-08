@@ -11,6 +11,15 @@
         flex-direction: row;
     }
 
+    &--grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--purple {
+        background-color: map-get(var.$colors, purple-900);
+    }
+
     &__image {
         width: 100vw;
 
@@ -23,7 +32,7 @@
         }
 
         &--medium {
-            max-width: 375px;
+            max-width: 350px;
         }
 
         &--small {
