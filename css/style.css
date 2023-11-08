@@ -54,8 +54,11 @@ input {
   flex-direction: row;
 }
 .l-section__image {
+  width: 100vw;
   max-width: 1000px;
-  width: 100%;
+}
+.l-section__image--medium {
+  max-width: 750px;
 }
 .l-section__image--small {
   max-width: 375px;
