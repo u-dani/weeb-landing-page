@@ -1,0 +1,41 @@
+@use '../variables' as var;
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+
+    .btn--link {
+        .btn__label {
+            color: map-get(var.$colors, purple-600);
+        }
+
+        .btn__icon {
+            transition: 300ms ease-out;
+        }
+
+        &:hover {
+            .btn__label {
+                color: map-get(var.$colors, purple-600);
+            }
+
+            .btn__icon {
+                transform: translateX(8px);
+            }
+        }
+    }
+    
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__grid {
+        gap: 24px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
