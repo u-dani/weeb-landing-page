@@ -64,4 +64,9 @@
         max-width: 1000px;        
         width: 100%;
     }
+
+    &__logo-container {
+        display: flex;
+        gap: 80px;
+    }
 }
