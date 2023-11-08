@@ -1,17 +1,36 @@
 @use '../variables' as var;
 
 .title {
-    font-size: 4.5rem;
+    font-size: 4.5rem; // 72px
     font-weight: 800;
     line-height: 110%;
 
     &--two {
-        font-size: 3.5rem;
+        font-size: 3.5rem; // 56px
+    }
+
+    &--purple {
+        color: map-get(var.$colors, purple-400);
     }
 
     &--dark-purple {
         color: map-get(var.$colors, purple-600);
     }
 
+    #square {
+        position: relative;
+        display: inline-block;
+        z-index: 0;
 
+        &::before {
+            content: "";
+            position: absolute;
+            width: 128px;
+            left: -8px;
+            z-index: -1;
+            top: -5px;
+            height: 100%;
+            border: 3px solid orangered;
+        }
+    }
 }
