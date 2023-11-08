@@ -57,8 +57,14 @@ input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.l-section--purple {
+.l-section--bg-purple {
   background-color: #581C87;
+}
+.l-section--bg-white {
+  background-color: #fff;
+}
+.l-section--bg-white * {
+  color: #0F172A;
 }
 .l-section__image {
   width: 100vw;
@@ -252,47 +258,101 @@ input {
   background-color: #C084FC;
 }
 
-.card {
+.content {
   max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 32px;
 }
-.card--center {
+.content--center {
   justify-content: center;
   align-items: center;
 }
-.card--center .card__text {
+.content--center .content__text {
   text-align: center;
 }
-.card__top {
+.content__top {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.card__caption {
+.content__caption {
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 100%;
   text-transform: capitalize;
 }
-.card__text {
+.content__text {
   font-size: 1.125rem;
   line-height: 160%;
 }
-.card__button-group {
+.content__button-group {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
 }
-.card .btn--link {
+.content .btn--link {
   padding: 16px 0px;
 }
-.card .btn--link:hover {
+.content .btn--link:hover {
   gap: 16px;
+}
+
+.card__image {
+  width: 100%;
+  height: 220px;
+  aspect-ratio: 3/2;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/wild-horse.jpg");
+  background-size: 100%;
+  background-position: center;
+  position: relative;
+  border-radius: 4px;
+  transition: 300ms ease-out;
+}
+.card__image:hover {
+  background-size: 110%;
+}
+.card #image-design-thinking {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/wild-horse.jpg");
+}
+.card #image-festival {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/festival.jpg");
+}
+.card #image-happy-father {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/happy-father-day.jpg");
+}
+.card__badge {
+  background-color: #F3E8FF;
+  color: #6B21A8;
+  padding: 2px 4px;
+  font-size: 0.8rem;
+  line-height: 140%;
+  border-radius: 4px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 0px 16px;
+}
+.card__caption {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 110%;
+}
+.card__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 110%;
+}
+.card .btn--link {
+  padding: 12px 0px;
 }
 
 .card-user {
@@ -315,6 +375,36 @@ input {
 .card-user__description {
   font-size: 1rem;
   line-height: 140%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+}
+.card-container .btn--link .btn__label {
+  color: #9333EA;
+}
+.card-container .btn--link .btn__icon {
+  transition: 300ms ease-out;
+}
+.card-container .btn--link:hover .btn__label {
+  color: #9333EA;
+}
+.card-container .btn--link:hover .btn__icon {
+  transform: translateX(8px);
+}
+.card-container__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.card-container__grid {
+  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /*# sourceMappingURL=style.css.map */
