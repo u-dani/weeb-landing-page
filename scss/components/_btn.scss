@@ -1,0 +1,38 @@
+@use '../variables' as var;
+
+.btn {
+    background-color: transparent;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    transition: 300ms ease-out;
+
+    &__label {
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: .5px;
+        line-height: 1.5rem;
+        padding: 0px 16px;
+        transition: 300ms ease-out;
+    }
+
+    &:hover &__label {
+        color: rgba(255, 255, 255, .8);        
+    }
+
+    &--fill {
+        background-color: map-get(var.$colors, purple-600);
+        border-color: map-get(var.$colors, purple-600);
+
+        &:hover {     
+            background-color: map-get(var.$colors, purple-800);
+            border-color: map-get(var.$colors, purple-800);
+        }
+    }
+
+    &--outline {
+        border-color: map-get(var.$colors, white);
+    }
+}
