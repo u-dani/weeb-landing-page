@@ -7,6 +7,10 @@
     align-items: center;
     gap: 80px;
 
+    &--row {
+        flex-direction: row;
+    }
+
     &__content {
         max-width: 800px;
         display: flex;
@@ -63,6 +67,10 @@
     &__image {
         max-width: 1000px;        
         width: 100%;
+
+        &--small {
+            max-width: 375px;
+        }
     }
 
     &__logo-container {
