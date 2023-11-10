@@ -1,7 +1,7 @@
 @use '../variables' as var;
 
 .title {
-    font-size: 4.5rem; // 72px
+    font-size: 4.5rem; // min 56px - max 72px
     font-weight: 800;
     line-height: 110%;
 
@@ -17,6 +17,7 @@
         color: map-get(var.$colors, purple-600);
     }
 
+    // section 1
     #line-bottom {
         position: relative;
         display: inline-block;
@@ -30,8 +31,15 @@
             left: 3px;
             background-color: map-get(var.$colors, purple-400);
         }
+
+        @media screen and (max-width: var.$breakpoint-tablet) {
+            &::before {
+                display: none;
+            }
+        }
     }
 
+    // section 1
     #line-top {
         position: relative;
         display: inline-block;
@@ -46,6 +54,14 @@
             top: 15px;
             left: 4px;
             background-color: map-get(var.$colors, purple-400);
+        }
+
+        @media screen and (max-width: var.$breakpoint-tablet) {
+            &::before {
+                width: 152px;
+                height: 6px;
+                top: 12px;
+            }
         }
     }
 
