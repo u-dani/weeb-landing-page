@@ -81,7 +81,7 @@ input {
 .l-header {
   display: flex;
   justify-content: center;
-  padding: 24px 80px;
+  padding: 24px clamp(16px, 5vw, 80px);
   background-color: #0F172A;
 }
 .l-header__wrapper {
@@ -130,11 +130,11 @@ input {
 }
 
 .l-section {
-  padding: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 80px;
+  padding: 80px;
 }
 .l-section--row {
   flex-direction: row;
@@ -144,7 +144,7 @@ input {
   grid-template-columns: repeat(3, 1fr);
 }
 .l-section__image {
-  width: 100vw;
+  width: 100%;
 }
 .l-section__image--extra {
   max-width: 1000px;
@@ -161,6 +161,15 @@ input {
 .l-section__logo-container {
   display: flex;
   gap: 80px;
+}
+@media screen and (max-width: 850px) {
+  .l-section {
+    gap: 48px;
+    padding: 16px;
+  }
+  .l-section .title {
+    font-size: 56px;
+  }
 }
 
 .l-footer {
@@ -233,7 +242,7 @@ input {
 }
 @media screen and (max-width: 850px) {
   .l-page {
-    padding-top: 100px;
+    padding-top: 148px;
   }
 }
 
@@ -348,6 +357,11 @@ input {
   left: 3px;
   background-color: #C084FC;
 }
+@media screen and (max-width: 850px) {
+  .title #line-bottom::before {
+    display: none;
+  }
+}
 .title #line-top {
   position: relative;
   display: inline-block;
@@ -362,6 +376,13 @@ input {
   top: 15px;
   left: 4px;
   background-color: #C084FC;
+}
+@media screen and (max-width: 850px) {
+  .title #line-top::before {
+    width: 152px;
+    height: 6px;
+    top: 12px;
+  }
 }
 .title #square {
   position: relative;
