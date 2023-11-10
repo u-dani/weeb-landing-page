@@ -1,32 +1,39 @@
 @use '../variables' as var;
 
 .card {
-    &__image {
+    &__container-image {
+        position: relative;
         width: 100%;
         height: 220px;
         aspect-ratio: 3/2;
-        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('../images/wild-horse.jpg');
-        background-size: 100%;
-        background-position: center;
-        position: relative;
-        border-radius: 4px;
-        transition: 300ms ease-out;
+        overflow: hidden;
 
-        &:hover {
-            background-size: 110%;
+        &:hover .card__image {
+            transform: scale(1.2);
+        }
+
+        #image-design-thinking {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('../images/wild-horse.jpg');
+        }
+    
+        #image-festival {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('../images/festival.jpg');
+        }
+    
+        #image-happy-father {
+            background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('../images/happy-father-day.jpg');
         }
     }
 
-    #image-design-thinking {
+    &__image {
+        width: 100%;
+        height: 100%;
+        background: black;
         background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('../images/wild-horse.jpg');
-    }
-
-    #image-festival {
-        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('../images/festival.jpg');
-    }
-
-    #image-happy-father {
-        background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('../images/happy-father-day.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: 300ms ease-out;
     }
 
     &__badge {
