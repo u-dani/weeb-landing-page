@@ -38,15 +38,26 @@
 
     &__logo-container {
         display: flex;
-        gap: 80px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px 80px;
+
+        @media screen and (max-width: var.$breakpoint-tablet) {
+            gap: 24px;
+        }
     }
 
     @media screen and (max-width: var.$breakpoint-tablet) {
         gap: 48px;
-        padding: 16px;
+        padding: 16px 16px 48px;
 
         .title {
-            font-size: 56px;
+            font-size: 3.5rem;
+        }
+
+        .title--two {
+            font-size: 2.5rem;
+            font-weight: 700;
         }
     }
 }
