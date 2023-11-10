@@ -160,15 +160,26 @@ input {
 }
 .l-section__logo-container {
   display: flex;
-  gap: 80px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px 80px;
+}
+@media screen and (max-width: 850px) {
+  .l-section__logo-container {
+    gap: 24px;
+  }
 }
 @media screen and (max-width: 850px) {
   .l-section {
     gap: 48px;
-    padding: 16px;
+    padding: 16px 16px 48px;
   }
   .l-section .title {
-    font-size: 56px;
+    font-size: 3.5rem;
+  }
+  .l-section .title--two {
+    font-size: 2.5rem;
+    font-weight: 700;
   }
 }
 
@@ -258,7 +269,7 @@ input {
   font-size: 2rem;
 }
 .logo__icon {
-  width: 32px;
+  height: 32px;
 }
 
 .menu ul {
@@ -337,6 +348,9 @@ input {
 }
 .title--two {
   font-size: 3.5rem;
+}
+.title--center {
+  text-align: center;
 }
 .title--purple {
   color: #C084FC;
