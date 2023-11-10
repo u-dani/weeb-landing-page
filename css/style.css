@@ -113,15 +113,6 @@ input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.l-section--bg-purple {
-  background-color: #581C87;
-}
-.l-section--bg-white {
-  background-color: #fff;
-}
-.l-section--bg-white * {
-  color: #0F172A;
-}
 .l-section__image {
   width: 100vw;
 }
@@ -195,6 +186,20 @@ input {
 }
 .l-footer__icon:hover {
   transform: translateY(-5px);
+}
+
+.l-page header, .l-page .l-section {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.l-page--bg-purple {
+  background-color: #581C87;
+}
+.l-page--bg-white {
+  background-color: #fff;
+}
+.l-page--bg-white * {
+  color: #0F172A;
 }
 
 .logo {
