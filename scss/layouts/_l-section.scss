@@ -1,5 +1,3 @@
-@use '../variables' as var;
-
 .l-section {
     padding: 80px;
     display: flex;
@@ -14,18 +12,6 @@
     &--grid-3 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    &--bg-purple {
-        background-color: map-get(var.$colors, purple-900);
-    }
-
-    &--bg-white {
-        background-color: #fff;
-        
-        & * {
-            color: map-get(var.$colors, blue-gray-900);
-        }
     }
 
     &__image {
