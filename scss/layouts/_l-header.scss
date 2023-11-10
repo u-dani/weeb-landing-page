@@ -3,7 +3,7 @@
 .l-header {
     display: flex;
     justify-content: center;
-    padding: 24px 80px;
+    padding: 24px clamp(16px, 5vw, 80px);
     background-color: map-get(var.$colors, blue-gray-900);
 
     &__wrapper {
@@ -39,7 +39,7 @@
         display: none;
     }
 
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: var.$breakpoint-tablet) {
         position: fixed;
         top: 0;
         width: 100%;
