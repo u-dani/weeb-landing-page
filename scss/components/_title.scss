@@ -9,6 +9,10 @@
         font-size: 3.5rem; // 56px
     }
 
+    &--center {
+        text-align: center;
+    }
+
     &--purple {
         color: map-get(var.$colors, purple-400);
     }
