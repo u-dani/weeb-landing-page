@@ -17,4 +17,8 @@
             color: map-get(var.$colors, blue-gray-900);
         }
     }
+
+    @media screen and (max-width: 850px) {
+        padding-top: 100px;
+    }
 }
