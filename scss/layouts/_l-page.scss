@@ -1,0 +1,20 @@
+@use '../variables' as var;
+
+.l-page {
+    header, .l-section {
+        max-width: var.$max-width-page;
+        margin: 0 auto;
+    }
+
+    &--bg-purple {
+        background-color: map-get(var.$colors, purple-900);
+    }
+
+    &--bg-white {
+        background-color: #fff;
+        
+        & * {
+            color: map-get(var.$colors, blue-gray-900);
+        }
+    }
+}
