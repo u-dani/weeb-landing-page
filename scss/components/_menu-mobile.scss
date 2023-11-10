@@ -1,0 +1,96 @@
+@use '../variables' as var;
+
+.menu-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    z-index: 10;
+
+    &__icon {
+        display: inline-block;
+        cursor: pointer;
+        transition: 200ms ease;
+        z-index: 20;
+    }
+
+    &__bar {
+        background-color: white;
+        border-radius: 2px;
+        height: 3px;
+        margin: 3px;
+        transition: 200ms ease;
+        width: 25px;
+    }
+
+    &.is-open {
+        .menu-mobile__bar {
+            &:first-child {
+                -webkit-transform: translateY(6px) rotate(45deg);
+                -ms-transform: translateY(6px) rotate(45deg);
+                transform: translateY(6px) rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:last-child {
+                -webkit-transform: translateY(-6px) rotate(-45deg);
+                -ms-transform: translateY(-6px) rotate(-45deg);
+                transform: translateY(-6px) rotate(-45deg);
+            }
+        }
+    }
+
+    &:not(.is-open) .menu-mobile__icon:hover .menu-mobile__bar {
+        margin: 5px 3px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+        background: darken(map-get(var.$colors, blue-gray-900), 5);
+        height: 100vh;
+        padding: 140px 24px 40px;
+        position: absolute;
+        right: -101%;
+        top: 0;
+        transition: 200ms ease;
+        width: 280px;
+        z-index: 10;
+    }
+
+    &__link {
+        display: inline-block;
+        border-radius: 4px;
+        font-size: 1rem;
+        height: 100%;
+        letter-spacing: .5px;
+        padding: 12px;
+        width: 100%;
+
+        &:hover {
+            background: rgba(255, 255, 255, .4);
+        }
+    }
+
+    .btn, button {
+        justify-content: start;
+        margin-top: 12px;
+        padding: 12px;
+        text-align: start;
+        width: 100%;
+    }
+
+    .btn--link {
+        padding: 12px 0px;
+    }
+
+    &.is-open &__content {
+        right: 0;
+    }
+}
