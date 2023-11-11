@@ -153,7 +153,7 @@ input {
   max-width: 750px;
 }
 .l-section__image--medium {
-  max-width: 350px;
+  max-width: min(350px, 60vw);
 }
 .l-section__image--small {
   max-width: 284px;
@@ -180,6 +180,16 @@ input {
   .l-section .title--two {
     font-size: 2.5rem;
     font-weight: 700;
+  }
+  .l-section--row {
+    flex-direction: column-reverse;
+    padding: 48px 16px;
+  }
+  .l-section--row .content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
   }
 }
 
@@ -398,20 +408,25 @@ input {
     top: 12px;
   }
 }
-.title #square {
+.title #square-outline {
   position: relative;
   display: inline-block;
   z-index: 0;
 }
-.title #square::before {
+.title #square-outline::before {
   content: "";
   position: absolute;
   width: 128px;
-  left: -8px;
+  left: -6px;
   z-index: -1;
   top: -5px;
   height: 100%;
   border: 3px solid #C2410C;
+}
+@media screen and (max-width: 850px) {
+  .title #square-outline::before {
+    width: 90px;
+  }
 }
 .title #square-fill {
   position: relative;
