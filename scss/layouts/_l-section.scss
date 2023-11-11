@@ -17,7 +17,11 @@
     }
 
     &__image {
-        width: 100%;
+        width: 100vw;
+
+        img {
+            width: 100%;
+        }
 
         &--extra {
             max-width: 1000px;
@@ -25,10 +29,12 @@
 
         &--large {
             max-width: 750px;
+            min-width: 500px;
         }
 
         &--medium {
-            max-width: min(350px, 60vw);
+            max-width: 350px;
+            min-width: 220px;
         }
 
         &--small {
