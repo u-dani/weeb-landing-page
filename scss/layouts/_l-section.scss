@@ -28,7 +28,7 @@
         }
 
         &--medium {
-            max-width: 350px;
+            max-width: min(350px, 60vw);
         }
 
         &--small {
@@ -58,6 +58,18 @@
         .title--two {
             font-size: 2.5rem;
             font-weight: 700;
+        }
+
+        &--row {
+            flex-direction: column-reverse;
+            padding: 48px 16px;
+
+            .content {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                max-width: 600px;
+            }
         }
     }
 }
