@@ -235,6 +235,7 @@ input {
   color: #0F172A;
 }
 .l-footer__grid {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 48px;
@@ -280,6 +281,25 @@ input {
 }
 .l-footer__icon:hover {
   transform: translateY(-5px);
+}
+@media screen and (max-width: 1000px) {
+  .l-footer {
+    padding: 0px 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .l-footer__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+    text-align: center;
+  }
+  .l-footer__bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
 }
 
 .l-page header, .l-page .l-section {
