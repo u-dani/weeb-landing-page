@@ -13,6 +13,10 @@
     padding: 12px 26px;
     transition: 300ms ease-out;
 
+    &:hover .btn__arrow {
+        transform: translateX(8px);
+    }
+
     &__label {
         font-size: 1rem;
         font-weight: 500;
@@ -21,12 +25,13 @@
         transition: 300ms ease-out;
     }
 
-    &__icon {
+    &__arrow {
         width: 24px;
         display: flex;
+        transition: 300ms ease-out;
     }
 
-    &--link:hover .btn__label {
+    &--link:not(:has(.btn__arrow)):hover .btn__label {
        color: rgba(255, 255, 255, .8);
     }
 
