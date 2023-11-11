@@ -1,27 +1,51 @@
 @use '../variables' as var;
 
 .card-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    gap: 24px;
-
-    .btn--link {
-        .btn__label {
-            color: map-get(var.$colors, purple-600);
-        }
-    }
+    gap: 40px;
     
-    &__row {
+    &__top {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 24px;
+
+        .btn--link {
+            flex-shrink: 0;
+            padding: 0px;
+            
+            .btn__label {
+                color: map-get(var.$colors, purple-600);
+            }
+        }
     }
 
     &__grid {
-        gap: 24px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    @media screen and (max-width: var.$breakpoint-tablet) {
+        align-items: center;
+        padding-top: calc(48px - 16px);
+
+        &__top {
+            flex-direction: column;
+            gap: 16px;
+            text-align: center;
+        }
+
+        &__grid {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            max-width: 500px;
+            width: 100%;
+        }
     }
 }
