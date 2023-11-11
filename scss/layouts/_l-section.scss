@@ -14,6 +14,7 @@
     &--grid-3 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: clamp(24px, 4vw, 80px);
     }
 
     &__image {
@@ -76,6 +77,34 @@
                 align-items: center;
                 text-align: center;
                 max-width: 600px;
+            }
+        }
+
+        &--grid-3 {
+            padding: 48px 24px;
+            gap: 32px;
+
+            .l-section__image {
+                width: 100px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        &--grid-3 {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+
+            & > .content {
+                max-width: 600px;
+                width: 100%;
+
+                &:first-child {
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
             }
         }
     }
