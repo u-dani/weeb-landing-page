@@ -554,10 +554,14 @@ input {
   padding: 16px 0px;
 }
 
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .card__container-image {
   position: relative;
   width: 100%;
-  height: 220px;
   aspect-ratio: 3/2;
   overflow: hidden;
 }
@@ -595,6 +599,7 @@ input {
   left: 16px;
 }
 .card__content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -606,12 +611,20 @@ input {
   line-height: 110%;
 }
 .card__title {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 1.5rem + 1vw, 2.5rem);
   font-weight: 700;
   line-height: 110%;
 }
+.card__button-group {
+  margin-top: auto;
+  display: flex;
+  gap: 16px;
+}
 .card .btn--link {
   padding: 12px 0px;
+}
+.card .btn--link .btn__label {
+  color: #9333EA;
 }
 
 .card-user {
@@ -637,24 +650,48 @@ input {
 }
 
 .card-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  gap: 24px;
+  gap: 40px;
 }
-.card-container .btn--link .btn__label {
-  color: #9333EA;
-}
-.card-container__row {
+.card-container__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
 }
+.card-container__top .btn--link {
+  flex-shrink: 0;
+  padding: 0px;
+}
+.card-container__top .btn--link .btn__label {
+  color: #9333EA;
+}
 .card-container__grid {
-  gap: 24px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media screen and (max-width: 1000px) {
+  .card-container {
+    align-items: center;
+    padding-top: 32px;
+  }
+  .card-container__top {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  .card-container__grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    max-width: 500px;
+    width: 100%;
+  }
 }
 
 .menu-mobile {
