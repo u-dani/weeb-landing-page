@@ -94,6 +94,7 @@
         &--grid-3 {
             display: flex;
             flex-direction: column;
+            // align-items: center;
             max-width: 600px;
 
             & > .content {
@@ -105,6 +106,10 @@
                     justify-content: center;
                     text-align: center;
                 }
+            }
+
+            .l-section__image {
+                width: 100%;
             }
         }
     }
