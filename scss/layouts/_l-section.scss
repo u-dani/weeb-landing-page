@@ -29,16 +29,17 @@
 
         &--large {
             max-width: 750px;
-            min-width: 500px;
+            min-width: min(500px, 100vw);
         }
 
         &--medium {
             max-width: 350px;
-            min-width: 220px;
+            min-width: 260px;
         }
 
         &--small {
             max-width: 284px;
+            min-width: 230px;
         }
     }
 
