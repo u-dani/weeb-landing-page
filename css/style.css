@@ -210,6 +210,7 @@ input {
   .l-section--grid-3 {
     display: flex;
     flex-direction: column;
+    align-items: center;
     max-width: 600px;
   }
   .l-section--grid-3 > .content {
@@ -494,6 +495,12 @@ input {
   bottom: 0;
   left: 2px;
   background-color: #C084FC;
+}
+@media screen and (max-width: 1000px) {
+  .title #line-bottom-two::before {
+    width: 122px;
+    height: 5px;
+  }
 }
 
 .content {
