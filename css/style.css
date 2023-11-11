@@ -481,6 +481,14 @@ input {
   left: -10px;
   background-color: #BE185D;
 }
+@media screen and (max-width: 1000px) {
+  .title #square-fill::before {
+    width: 50px;
+    height: 50px;
+    left: -5px;
+    top: 9px;
+  }
+}
 .title #line-bottom-two {
   position: relative;
   display: inline-block;
