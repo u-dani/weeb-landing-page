@@ -110,6 +110,7 @@
         }
     }
 
+    // section testimonials
     #line-bottom-two {
         position: relative;
         display: inline-block;
@@ -124,6 +125,13 @@
             bottom: 0;
             left: 2px;
             background-color: map-get(var.$colors, purple-400);
+        }
+
+        @media screen and (max-width: var.$breakpoint-tablet) {
+            &::before {
+                width: 122px;
+                height: 5px;
+            }
         }
     }
 }
