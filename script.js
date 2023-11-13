@@ -4,3 +4,4 @@ menu.addEventListener('click', e => {
     e.preventDefault();
     menu.classList.toggle('is-open')
 })
+
