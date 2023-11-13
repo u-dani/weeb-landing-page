@@ -1,8 +1,5 @@
 {
   "devDependencies": {
     "sass": "^1.69.5"
-  },
-  "dependencies": {
-    "aos": "^2.3.4"
   }
 }
